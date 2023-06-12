@@ -11,7 +11,7 @@ body {
     line-height: 1.8;
     word-wrap: break-word;
   
-    background-image: url('/images/1111.png'); 
+    background-image: url('../images/1111.png'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@ body {
 }
 .recruit-option:first-child::before {
     content: "";
-    background-image: url('/images/img1.jpeg'); 
+    background-image: url('../images/img1.jpeg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@ body {
   
   .recruit-option:last-child::before {
     content: "";
-    background-image: url('/images/img2.jpeg');
+    background-image: url('../images/img2.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
