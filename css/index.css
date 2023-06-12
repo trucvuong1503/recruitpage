@@ -10,8 +10,7 @@ body {
     font-family: Raleway,Verdana,Meiryo, Hiragino Kaku Gothic Pro,sans-serif;
     line-height: 1.8;
     word-wrap: break-word;
-    background-color: #fff;
-
+  
     background-image: url('/images/1111.png'); 
     background-attachment: fixed;
     background-position: center;
@@ -73,7 +72,8 @@ body {
   
 /* Recruit */
 #recruit, #about {
-    background-color: #ceecfa;
+    background-color: #688DA8;
+    color: #fff;
 } 
 .section {
     margin-top: 60px;
@@ -91,25 +91,60 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 0 10px;
-    padding: 20px;
-}
-.recruit-option img{
-    width: 250px;
+    padding: 60px 0px ;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease; 
 }
 
-.recruit-option:last-child {
-    border-left: 2px solid #000;
+.recruit-option:hover {
+  transform: scale(1.01); 
 }
+.recruit-option:first-child::before {
+    content: "";
+    background-image: url('/images/img1.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .recruit-option:last-child::before {
+    content: "";
+    background-image: url('/images/img2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 .recruit-link {
-    padding: 30px 20px;
+    width: 100%;
+    padding: 15px 60px;
     text-decoration: none;
     color: #000;
     background-color: #f0f0f0;
-    transition: background-color 0.2s ease;
+    transition: text-indent background-color 0.2s ease;
+    position: relative;
+    z-index: 1;
 }
   
 .recruit-link:hover {
     background-color: #3d658a;
+    text-indent: 10px;
+    color: #fff;
 }
 
 /* フッタ */
