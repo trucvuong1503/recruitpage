@@ -1,0 +1,85 @@
+:root{
+    --red:rgba(255, 0, 0, 0.596);
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: 'Raleway',Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+header{
+    
+    top:0; left:0; right:0;
+    background:#fff;
+    padding:1.2rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.logo-img {
+    width: 1.9 m; /* 调整图片的宽度 */
+    height: 2.0em; /* 调整图片的高度 */
+    float: left; /* 图片左浮动 */
+    margin-right: 10px; /* 可根据需要调整图片与文字之间的间距 */
+}
+
+header .logo{
+
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:var(--red);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:#666;
+}
+
+header .navbar a:hover{
+    color:var(--red);
+}
+
+header #headline{
+    display: none;
+}
+
+header .head-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.navbar .current {
+    padding: 0px 0px 8px 0px;
+    border-bottom: 3px solid red;
+    width: 100%;
+}
+

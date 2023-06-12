@@ -1,0 +1,217 @@
+html, body, div, h1, h2, h3, h4, h5,article, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    color: #333;
+    font-size: 16px;
+    font-family: Verdana,Meiryo, Hiragino Kaku Gothic Pro,sans-serif;
+    line-height: 1.8;
+    word-wrap: break-word;
+    background-color: #fff;
+    -webkit-tap-highlight-color: rgba(244, 193, 7, 0.3);
+    -webkit-text-size-adjust: 100%;
+}
+.container{
+    max-width: 1120px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 職種 */
+.three_job{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tab-button {
+    background-color: #2C98C3;  /* pastel blue */
+    border: none;
+    color: white;
+    padding: 15px 70px;  /* adjust as needed for size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;  /* adjust as needed */
+    margin: 10px 20px;  /* little space between buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover, .tab-button.clicked{
+    background-color: #5DB5D8;
+}
+.info-content {
+    display: none;
+    margin-top: 20px;
+}
+
+#info0 {
+    display: block;
+}
+/*  */
+.pages_ttl{
+    margin: 44.61538px 0px;
+    padding: 20px 0 8.57988px;
+    color: #2C98C3;
+    font-size: 22.30769px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    border-bottom: 2px solid #99D0E5;
+}
+
+/* 要項 */
+.requirements dl dt {
+    float: left;
+    width: 250px;
+    padding: 0 0.5em 15px;
+    font-size: 1.06em;
+    font-weight: 600;
+}
+.requirements dl dd {
+    padding-left: 260px;
+}
+
+.requirements dl {
+    padding: 18px 10px;
+    border-bottom: 1px dotted #ccc;
+}
+.requirements_box {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #333333;
+    background: #FFF;
+    border: solid 2px #2C98C3;
+    border-radius: 10px;
+}
+.btnToForm {
+    width: 100%;
+    min-width: 290px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    background: #2C98C3;
+}
+.requirements_enge{
+    margin-bottom: 18px;
+    padding: 4px 0 4px 11px;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.3;
+    border-left: 8px solid #2C98C3;
+}
+/* 採用フロー */
+.process_img{
+    float: left;
+    width: 50%;
+}
+.process_info{
+    padding: 13px 7px;
+}
+.process::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.process_info dl{
+    font-size: 14px;
+    padding: 18px 10px;
+    border-bottom: 1px dotted #ccc;
+}
+.process_info dl dd{
+    font-size: 12px;
+}
+/* エントリーボタン */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.center-button {
+    background-color: #2C98C3;
+    border: none;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 50px ;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.center-button:hover {
+    background-color: #5DB5D8; 
+}
+/* フッタ */
+#footer {
+    background: #f2f2f2;
+    padding: 30px;
+}
+.footer_hd {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.footer_group_ttl {
+
+    letter-spacing: .1em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer_group_ttl .en {
+    font-family: 'Raleway',Meiryo, Hiragino Kaku Gothic Pro, sans-serif;
+    display: block;
+    font-size: 13px;
+}
+.logo-img-small{
+    padding-top: 10px;
+    height: 2.0em;
+    text-align: center;
+}
+/* page top button */
+#pageTop {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 9999;
+}
+#pageTop a {
+    background: #F4C107;
+    text-decoration: none;
+    color: #fff;
+    padding: 9px 15px 3px 15px;
+    text-align: center;
+    display: block;
+    opacity: 0.9;
+    line-height: 1;
+    border-radius: 6px;
+}
+.angleUp:before {
+    content: "^";
+    padding-right: 0;
+    font-size: 1.4em;
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}

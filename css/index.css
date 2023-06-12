@@ -1,0 +1,145 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    color: #333;
+    font-size: 16px;
+    font-family: Raleway,Verdana,Meiryo, Hiragino Kaku Gothic Pro,sans-serif;
+    line-height: 1.8;
+    word-wrap: break-word;
+    background-color: #fff;
+
+    background-image: url('/images/1111.png'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Nav */
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    
+  }
+  
+  .nav-menu li {
+    display: inline-block;
+    position: relative;
+    
+  }
+  
+  .nav-menu li a {
+    display: block;
+    padding:0 1.5rem;
+    text-decoration: none;
+    color: #555;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0 2rem;
+    margin: 0;
+    background: rgba(253, 250, 232, 0.8);
+    transition: all 0.5s ease;
+    font-size: 13px;
+    border-top: 3px solid red;
+  }
+  
+  .dropdown-menu li {
+    display: block;
+    float: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px solid #f8f1c4;
+  }
+  
+  .dropdown-menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #555;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+/* Recruit */
+#recruit, #about {
+    background-color: #fff;
+} 
+.section {
+    margin-top: 60px;
+    padding: 20px;
+  
+}
+.recruit-options {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.recruit-option {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+}
+.recruit-option img{
+    width: 250px;
+}
+
+.recruit-option:last-child {
+    border-left: 2px solid #000;
+}
+.recruit-link {
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #000;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+  
+.recruit-link:hover {
+    background-color: #3d658a;
+}
+
+/* フッタ */
+#footer {
+    background: #f2f2f2;
+    padding: 30px;
+}
+.footer_hd {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.footer_group_ttl {
+
+    letter-spacing: .1em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer_group_ttl .en {
+    font-family: 'Raleway',Meiryo, Hiragino Kaku Gothic Pro, sans-serif;
+    display: block;
+    font-size: 13px;
+}
+.logo-img-small{
+    padding-top: 10px;
+    height: 2.0em;
+    text-align: center;
+}
+
+
+ 
+  
+ 
+  
