@@ -1,0 +1,83 @@
+#about{
+    background: rgba(243,187,200,0.7);
+}
+.home{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background:url(/images/home2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    max-width: 50rem;
+    text-align: left;
+    margin-left: 8%;
+  }
+  
+.title {
+    font-weight: bold;
+    color: white;
+    font-size: 7rem;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.imagelist {
+    width: 55%;
+    height:auto;
+}
+
+.show{
+    width: 550px; /* 调整图片的宽度 */
+    height: 300px; /* 调整图片的高度 */
+    float: left; /* 图片左浮动 */
+    margin-bottom: 20px;  
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+.textlist {
+    width: 45%;
+    padding: 20px;
+    height:auto;
+    overflow: auto;
+}
+.lalaleft{
+    margin-left:0%;
+}
+.lalaright{
+    float: right;
+    margin-right: 80px;
+    margin-bottom: 10px;
+}
+
+.about .textlist h2{
+    font-size: 4rem;
+    font-style: oblique;
+}
+
+.about .textlist h3{
+    font-size: 3rem;
+    font-family:'Times New Roman', Times, serif;
+    font-style:oblique;
+    letter-spacing: 2px;
+    color: blue;
+}
+
+
+.heading span{
+    color:var(--red);
+}
+
+.about .textlist p{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

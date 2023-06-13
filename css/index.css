@@ -71,7 +71,7 @@ body {
   }
   
 /* Recruit */
-#recruit, #about {
+#recruit{
     background-color: #688DA8;
     color: #fff;
 } 
@@ -146,6 +146,28 @@ body {
     text-indent: 10px;
     color: #fff;
 }
+/* interview */
+#interview {
+    display: flex;
+    align-items: center;
+  }
+  
+  #image-gallery {
+    display: flex;
+    overflow: hidden;
+    padding: 50px;
+    width: 500px; /* Adjust to your need */
+  }
+  
+  .circle {
+    padding: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+
 
 /* フッタ */
 #footer {
