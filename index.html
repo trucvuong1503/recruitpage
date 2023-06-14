@@ -12,49 +12,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
-    
-    
     <script src="./javascript/app.js"></script>
     <script src="./javascript/interview.js"></script>
-    <script src="./javascript/interview.js"></script>
+    <script src="./javascript/news.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <title>Hihatu Renew Recruit Home Page</title>
 </head>
 <body>
     <header id="page-top">
         <input type="checkbox" name="" id="headline">
         <label for="headline" class="head-bars"></label>
-        <a href="#" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"><span>.</span>日発株式会社</a>
+        <a href="index.html" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"></a>
         <nav>
             <ul class="nav-menu">
               <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              
               <li><a href="#news">NEWS</a></li>
-              <li><a href="#interview">INTERVIEW</a></li>
+              <li><a href="#about">MESSAGE</a></li>
+
+              
+              <li class="dropdown">
+                <a href="index.html#interview">INTERVIEW</a>
+                <ul class="dropdown-menu">
+                  <li><a href="interview2.html">社員インタビュー</a></li>
+                </ul>
+              </li>
               <li class="dropdown">
                 <a href="#recruit">RECRUIT</a>
                 <ul class="dropdown-menu">
-                  <li><a href="freshman.html">新卒採用</a></li>
-                  <li><a href="mid-career.html">経験者採用</a></li>
+                  <li><a href="graduate.html">新卒採用</a></li>
+                  <li><a href="expert.html">経験者採用</a></li>
                 </ul>
               </li>
+
+
             </ul>
           </nav>
           
 </header>
 <div class="container">
-    <!-- <div id="home" class="section">...Home Content...</div> -->
-
-    <!-- home section starts  -->
     <section class="home" id="home">
         <div class="content">
             <h1 class="title">どんな小さな</h1>
             <h1 class="title">一歩でも必ず</h1>
         </div> 
     </section>
-
-    <!-- about section starts  -->
-    <!-- <div id="about" class="section">...About Content...</div> -->
+    <div id="news" class="section">
+      <div class="news-header"> 
+        <h1>NEWS</h1>
+        <p class="subheading">新着情報</p>
+        <div class="announcement">
+          <img src="./images/icon1.png" alt="Letter icon">
+          <span>24卒向け説明会開催です</span>
+        </div>
+      </div>
+      <div class="event-list">
+        <ul>
+          <li>
+            <div class="list-item">
+              <div class="date">10/05</div>
+              <div>新卒リクナビ2024<br>
+                詳しくは <a href="https://job.rikunabi.com/2024/company/r157772078/"target="_blank">こちら</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="list-item">
+              <div class="date">11/05</div>
+              <div>新卒リクナビ2024<br>
+                詳しくは <a href="https://job.rikunabi.com/2024/company/r157772078/"target="_blank">こちら</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="list-item">
+              <div class="date">12/05</div>
+              <div>新卒リクナビ2024<br>
+                詳しくは <a href="https://job.rikunabi.com/2024/company/r157772078/"target="_blank">こちら</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="list-item">
+              <div class="date">13/05</div>
+              <div>キャリタス就活2024<br>
+                詳しくは <a href="https://job.career-tasu.jp/2024/corp/00140872/"target="_blank">こちら</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+    </div>
 <section class="about" id="about">
     <div class="imagelist">
         <img src="./images/image1.jpg" alt="Image1" class="show">
@@ -77,29 +126,26 @@
         <p>“日々発展”する日発で一緒に働きませんか？</p><br>
         <img src="./images/lala.png" class="lalaright">
       </div>
-</section>
-    
-    <div id="news">
-    <div class="event-list">
-        <ul>
-          <li>
-            新卒リクナビ2024<br>
-            詳しくは <a href="https://job.rikunabi.com/2024/company/r157772078/"target="_blank">こちら</a>
-          </li>
-          <li>
-            キャリタス就活2024<br>
-            詳しくは <a href="https://job.career-tasu.jp/2024/corp/00140872/"target="_blank">こちら</a>
-          </li>
-        </ul>
-      </div>
+</section>   
+<!-- <div id="news-file">
       <div class="pdf-embed">
         <div class="added-text">下記のスライドにて、会社説明の資料をご覧いただけます。</div>
-        <embed src="./other/Company-briefing-materials.pdf" type="application/pdf" width="100%" height="500px" />
+        <embed src="./other/Company-briefing-materials.pdf#toolbar=0" type="application/pdf" width="800px" height="500px"/>
       </div>
+</div> -->
+<div id="news-file">
+  <div class="pdf-embed">
+      <div class="added-text">下記のスライドにて、会社説明の資料をご覧いただけます</div>
+      <canvas id="pdf-viewer"></canvas>
+
+      <div class="page-navigation">
+        <button id="prev">←</button>
+        <div id="page_num"></div>
+        <button id="next">→</button>
+      </div>
+  </div>
 </div>
-    <div id="interview" class="section">
-      <!-- <div class="background-section"> -->
-        <h1>社員インタビュー<br>PEOPLE</h1>
+    <!-- <div id="interview" class="section">      
         <div class="interview-section">
           <div class="arrow-left"></div>
           <div class="interview-container">
@@ -136,13 +182,69 @@
           <div class="arrow-right"></div>
   
       </div>
+      <div class="recruit-info">
+        <a href="#interview"></a>
+        <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">PEOPLE</h1>
+        <h3 class="requirements_enge">社員インタビュー</h3>
+        <p>2024年度新卒採用</p> 
+      </div> 
     </div>
-    
+     -->
+         <!-- インタビュ -->
+    <div id="interview" class="section">
+      <div class="recruit-info" >
+        <a href="#interview"></a>
+        <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">PEOPLE</h1>
+        <h3 class="requirements_enge">社員インタビュー</h3>
+        <p>日発にどんな先輩がいるの？若手からべテラン！</p>
+        <p>彼らの一日を覗いてみよう！</p>
+     </div>
+    <div class="people">
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="./images/2020mid-career.png" alt="img" draggable="false" ></div>
+            <h2>技術職</h2>
+            <span>2021年入社</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./images/2021mid-career.png" alt="img" draggable="false" ></div>
+            <h2>営業職</h2>
+            <span>2021年入社</span>
+          </li>
+          <li class="card">
+              <div class="img"><img src="./images/2022New graduate（man）.png" alt="img" draggable="false" ></div>
+              <h2>技術職</h2>
+              <span>2022年入社</span>
+          </li>
+          <li class="card">
+              <div class="img"><img src="./images/2022New graduate（women）.png" alt="img" draggable="false" ></div>
+              <h2>営業職</h2>
+              <span>2022年入社</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./images/2020mid-career.png" alt="img" draggable="false" ></div>
+            <h2>技術職</h2>
+            <span>2022年入社</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./images/2021mid-career.png" alt="img" draggable="false" ></div>
+            <h2>技術職</h2>
+            <span>2023年入社</span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+    </div>
+    </div>
     <div id="recruit" class="section">
+      <div class="recruit-info">
         <a href="#recruit"></a>
         <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">RECRUIT</h1>
         <h3 class="requirements_enge">募集要項</h3>
-        <p>2024年度新卒採用</p>    
+        <p>2024年度新卒採用</p> 
+      </div>   
         <div class="recruit-options">
                 <div class="recruit-option">
                     <a href="graduate.html" class="recruit-link" id="left">新卒採用</a>
@@ -150,10 +252,8 @@
                 <div class="recruit-option">
                     <a href="expert.html" class="recruit-link">経験者採用</a>
                 </div>
-            </div>
-          
+            </div> 
     </div>
-
 </div>
 <footer>
     <div id="footer" style="top: 0px;">

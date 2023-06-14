@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 function showInfo(i) {
     var infoContents = document.getElementsByClassName("info-content");
     var tabButtons = document.getElementsByClassName("tab-button");
@@ -13,4 +14,7 @@ function showInfo(i) {
 function sendEmail() {
     window.location.href = "mailto:example@example.com?subject=Job Application&body=Your message here";
 }
+
+})
+
 

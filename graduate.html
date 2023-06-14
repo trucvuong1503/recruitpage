@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/nav.css">
-
+    
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -18,22 +18,18 @@
 <header id="page-top">
         <input type="checkbox" name="" id="headline">
         <label for="headline" class="head-bars"></label>
-        <a href="index.html" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"><span>.</span>日発株式会社</a>
-    
-        <!-- <nav class="navbar">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#news">NEWS</a>
-            <a href="#review">INTERVIEW</a>
-            <a href="#contact" class="current">RECRUIT</a>
-        </nav> -->
+        <a href="index.html" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"></a>
         <nav>
             <ul class="nav-menu">
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              
-              <li><a href="#news">NEWS</a></li>
-              <li><a href="#interview">INTERVIEW</a></li>
+              <li><a href="index.html#home">HOME</a></li>
+              <li><a href="index.html#news">NEWS</a></li>
+              <li><a href="index.html#about">MESSAGE</a></li>
+              <li class="dropdown">
+                <a href="index.html#interview">INTERVIEW</a>
+                <ul class="dropdown-menu">
+                  <li><a href="interview2.html">社員インタビュー</a></li>
+                </ul>
+              </li>
               <li class="dropdown">
                 <a href="index.html#recruit">RECRUIT</a>
                 <ul class="dropdown-menu">
@@ -168,7 +164,7 @@
             </div>
         </div>
             <!-- フロー -->
-            <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">採用フロー</h1>
+            <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp; margin-top: 44px;">採用フロー</h1>
             <div class="process">
                 <img class="process_img" src="./images/recruit-process2.jpg" alt="">
                 <div class="process_info">

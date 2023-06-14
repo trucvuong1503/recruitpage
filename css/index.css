@@ -12,7 +12,8 @@ body {
     word-wrap: break-word;
     margin: 0;
     padding:0;
-    background-image: url('../images/1111.png'); 
+    /* background-image: url('../images/1111.png');  */
+    background-color: #fff;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,15 +74,37 @@ body {
   
 /* Recruit */
 #recruit{
-    background-color: #688DA8;
-    color: #fff;
+    display: flex;
+    justify-content: space-between; /* aligns children elements on the horizontal line with maximum space between */
+    align-items: flex-start;
+    
 } 
 .section {
-    margin-top: 60px;
-    padding: 20px;
-  
+    padding: 50px 10px; 
 }
+.recruit-info{
+  text-align: left;
+  margin-right: 40px;
+}
+.recruit-info h1 {
+  font-size: 3em;
+  margin-bottom: 0.1em;
+}
+
+.recruit-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+}
+
+.recruit-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.1em;
+}
+
 .recruit-options {
+    padding: 30px;
+    flex-grow: 1;
     display: flex;
     justify-content: space-between;
 }
@@ -143,32 +166,9 @@ body {
 }
   
 .recruit-link:hover {
-    background-color: #3d658a;
+    background-color: #FADFE5;;
     text-indent: 10px;
-    color: #fff;
 }
-/* interview */
-#interview {
-    display: flex;
-    align-items: center;
-  }
-  
-  #image-gallery {
-    display: flex;
-    overflow: hidden;
-    padding: 50px;
-    width: 500px; /* Adjust to your need */
-  }
-  
-  .circle {
-    padding: 5px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-  }
-  
-
 
 /* フッタ */
 #footer {

@@ -1,47 +1,109 @@
 #news {
   display: flex;
-  justify-content: center; /* 水平方向の中央揃え */
-  align-items: center; /* 垂直方向の中央揃え */
-  margin: 60px; /* 周囲との余白を調整 */
+  justify-content: space-between;
+  align-items: flex-start;
 }
-/* 左側のイベントリストのスタイル */
+.news-header {
+  text-align: left;
+  margin-right: 40px;
+}
+
+.news-header h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.news-header .subheading {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.news-header .announcement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.news-header .announcement img {
+  width: 26px; /* half of original width */
+  height: 26px; 
+}
+
 .event-list {
-  font-family: Arial, sans-serif; /* 设置字体样式 */
-  font-size: 16px; /* 设置字体大小 */
-  line-height: 1.5; /* 设置行高 */
-  color: #333; /* 设置字体颜色 */
-  flex: 1; /* 残りのスペースを均等に分配 */
-  height: 540px; /* イベントリストのコンテナの高さ */
-  overflow-y: hidden; /* 隐藏垂直方向的滚动条 */
-  background-color: #f2f2f2; /* 背景色の設定 */
-  border: 1px solid #ccc; /* ボーダースタイルの設定 */
-  padding: 10px; /* 内側の余白の設定 */
-  margin-right: 30px; /* 右側のコンテナとの間隔を調整 */
-  border-radius: 5px; /* 添加边框圆角效果 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  flex-grow: 1;
+  background: rgba(255, 192, 203, 0.5);
+  margin: 0px 40px;
+  padding: 30px;
+  border-radius: 8px;
 }
 
-.event-list li {
-  margin-bottom: 10px; /* 设置列表项之间的间距 */
-  border-bottom: 1px solid #ccc; /* 添加分割线 */
-  padding-bottom: 5px; /* 设置分割线下方的间距 */
-}
-
-/* 右側のPDF埋め込みコンテナのスタイル */
-.pdf-embed {
-  flex: 1; /* 残りのスペースを均等に分配 */
-  height: 540px; /* 右側のコンテナの高さ */
-  background-color: #fff; /* 背景色の設定 */
-  border: 1px solid #ccc; /* ボーダースタイルの設定 */
-  padding: 10px; /* 内側の余白の設定 */
-  margin-left: 30px; /* 左側のコンテナとの間隔を調整 */
-}
-
-/* 追加されたテキストのスタイル */
-.added-text {
-  background-color: #fff;
-  text-align: center;
-  margin-bottom: 10px;
+.event-list ul {
+  list-style: none;
   padding: 5px;
-  font-weight: bold; /* 太字のフォントの設定 */
+}
+
+.event-list .list-item {
+  display: flex;
+  justify-content: flex-start; /* Aligned to start */
+  gap: 80px; /* Adjust this value to your needs */
+  margin-bottom: 0.2em;
+  padding: 8px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.event-list .date {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 1em;
+}
+/* PDF FILE */
+#news-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+}
+.added-text{
+  padding: 10px;
+  font-size: 2em;
+}
+.pdf-embed {
+  width: 100%;
+  text-align: center;
+}
+
+#pdf-viewer {
+  width: 70%;
+  height: 500px;
+  margin-bottom: 1em;
+}
+
+#prev, 
+#next {
+  
+  border: none;
+  color: #000;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#page_num {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }

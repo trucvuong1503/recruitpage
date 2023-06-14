@@ -1,95 +1,74 @@
 document.addEventListener("DOMContentLoaded", function() {
-const imageWrapper = document.querySelector('.image-wrapper');
-const imageItems = document.querySelectorAll('.image-wrapper > *');
-const imageLength = imageItems.length;
-const perView = 3; // 一度に表示する写真の数
-let totalScroll = 0; // 現在のスクロール位置
-const delay = 3000; // 自動スクロール間隔
-let widthEl = 0; // 画像アイテムの幅
+const wrapper= document.querySelector(".wrapper");
+const carousel= document.querySelector(".carousel");
+const arrowBtns= document.querySelectorAll(".wrapper i");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const carouselChildrens = [...carousel.children];
 
-// CSS変数を設定して、表示する写真の数を指定
-imageWrapper.style.setProperty('--per-view', perView);
+let isDragging = false, startX, startScrollLeft, timeoutId;
 
-// 初期スライドの設定
-for (let i = 0; i < perView; i++) {
-  // imageWrapper内に初期の表示写真を追加
-  imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML);
-}
-
-// 自動スクロール設定
-let autoScroll = setInterval(scrolling, delay);
-
-function scrolling() {
-  totalScroll++;
-  if (totalScroll == imageLength + 1) {
-    // 画像グループが最後までスクロールされたら初期化
-    clearInterval(autoScroll);
-    totalScroll = 1;
-    // スクロールのアニメーションを無効化、左側に戻す
-    imageWrapper.style.transition = '0s';
-    imageWrapper.style.left = '0';
-    autoScroll = setInterval(scrolling, delay);
-  }
-  // 画像アイテムの幅を計算
-  widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24; 
-  imageWrapper.style.left = `-${totalScroll * widthEl}px`; // スクロール移動
-  imageWrapper.style.transition = '.3s'; // スクロールアニメーション設定
-}
-
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
-
-// 左矢印のクリックイベント
-arrowLeft.addEventListener('click', () => {
-  clearInterval(autoScroll);
-  totalScroll--;
-  if (totalScroll < 0) {
-    // 左矢印を押して前のグループに移動
-    totalScroll = imageLength - 1;
-    // スクロールアニメーションを無効化、指定した位置まで移動させる
-    imageWrapper.style.transition = '0s';
-    imageWrapper.style.left = `-${(totalScroll + 1) * widthEl}px`;
-    setTimeout(() => {
-      // スクロールアニメーション設定
-      imageWrapper.style.transition = '.3s';
-      imageWrapper.style.left = `-${totalScroll * widthEl}px`;
-    }, 10);
-  } else {
-    // スクロール位置に応じてleftプロパティを設定
-    imageWrapper.style.left = `-${totalScroll * widthEl}px`;
-  }
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+carouselChildrens.slice( -cardPerView).reverse().forEach(card => {
+  carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
 
-// 右矢印のクリックイベント
-arrowRight.addEventListener('click', () => {
-  clearInterval(autoScroll);
-  totalScroll++;
-  if (totalScroll > imageLength) {
-    // 最後のグループをスクロールした場合、最初のグループに戻す
-    totalScroll = 1;
-    // スクロールアニメーションを無効化、指定した位置まで移動させる
-    imageWrapper.style.transition = '0s';
-    imageWrapper.style.left = `-${widthEl}px`;
-    setTimeout(() => {
-      // スクロールアニメーション設定
-      imageWrapper.style.transition = '.3s';
-      imageWrapper.style.left = `-${totalScroll * widthEl}px`;
-    }, 10);
-  } else {
-    // スクロール位置に応じてleftプロパティを設定
-    imageWrapper.style.transition = '.3s';
-    imageWrapper.style.left = `-${totalScroll * widthEl}px`;
-  }
+carouselChildrens.slice(0, cardPerView).reverse().forEach(card => {
+  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
-const imageContainer = document.querySelectorAll('.image-container');
-
-imageContainer.forEach((container) => {
-  container.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const link = '/interview2';
-    window.location.href = link;
+arrowBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id === "left" ? -firstCardWidth :firstCardWidth;
   });
 });
+
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+  if(!isDragging) return;
+  carousel.scrollLeft = startScrollLeft - (e.pageX -startX);
+}
+
+const dragStop = () => {
+  isDragging=false;
+  carousel.classList.remove("dragging");
+}
+//自動動く
+const autoPlay = () => {
+  if (window.innerWidth < 600) return;
+  timeoutId = setTimeout(() => 
+    carousel.scrollLeft += firstCardWidth,2500);
+}
+
+autoPlay();
+
+const infiniteScroll = () => {
+  //１になったら、最後からscroll
+  if(carousel.scrollLeft === 0){
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+    carousel.classList.remove("no-transition");
+  }
+  //最後なら、最初からscroll
+  else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth -carousel.offsetWidth){
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  }
+  //マウスが上に置いたら、動かない
+  clearTimeout(timeoutId);
+  if(!wrapper.matches(":hover")) autoPlay();
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll",infiniteScroll);
+wrapper.addEventListener("mouseenter",() => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
 });

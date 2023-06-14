@@ -24,7 +24,7 @@ section{
 }
 
 header{
-    
+    position: fixed;
     top:0; left:0; right:0;
     background:#fff;
     padding:1.2rem 6%;
