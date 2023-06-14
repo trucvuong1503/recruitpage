@@ -1,29 +1,109 @@
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
+#interview{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	margin: 0;
+	padding: 0;
+	background-color: #67A2C2;
+}
+
+#interview h1 {
+	color: white;
+}
+
+.interview-section {
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-left,
+.arrow-right {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: #000;
+	font-size: 24px;
+}
+
+.arrow-left {
+	left: 85px;
   }
   
-  .carousel-container {
-    display: flex;
-    width: 100%;
-    height: 400px;
+  .arrow-right {
+	right: -1px;
   }
   
-  .carousel-slide {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    transition: 1s ease;
+  .arrow-left:before,
+  .arrow-right:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
   }
   
-  .carousel-slide img {
-    width: 100%;   /* Adjust as needed */
-  /* Adjust as needed */
-  border-radius: 50%;  /* This makes the image circular */
-  object-fit: cover;
-  margin: 20px;
+  .arrow-left:before {
+	border-right: 10px solid #000;
+	margin-right: 5px;
   }
   
+  .arrow-right:before {
+	border-left: 10px solid #000;
+	margin-left: 5px;
+  }
+
+.image-container {
+	overflow-x: hidden;
+	max-width: 768px;
+	margin-left: 150px; 
+}
+
+.image-container {
+  overflow-x: hidden;
+  max-width: 768px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+  grid-gap: 1.5rem;
+  position: relative;
+  left: 0;
+  transition: .3s;
+  justify-items: center;
+}
+
+.image-wrapper > * {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: .5rem;
+}

@@ -1,5 +1,6 @@
 #about{
-    background: rgba(243,187,200,0.7);
+    /* background: rgba(243,187,200,0.7); */
+    background: #fff;
 }
 .home{
     display: flex;

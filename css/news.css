@@ -1,20 +1,30 @@
-/* 親要素のスタイル、Flexboxレイアウトを使用 */
 #news {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
   margin: 60px; /* 周囲との余白を調整 */
 }
-
 /* 左側のイベントリストのスタイル */
 .event-list {
+  font-family: Arial, sans-serif; /* 设置字体样式 */
+  font-size: 16px; /* 设置字体大小 */
+  line-height: 1.5; /* 设置行高 */
+  color: #333; /* 设置字体颜色 */
   flex: 1; /* 残りのスペースを均等に分配 */
   height: 540px; /* イベントリストのコンテナの高さ */
-  overflow-y: scroll; /* 垂直方向のスクロールバーを表示 */
+  overflow-y: hidden; /* 隐藏垂直方向的滚动条 */
   background-color: #f2f2f2; /* 背景色の設定 */
   border: 1px solid #ccc; /* ボーダースタイルの設定 */
   padding: 10px; /* 内側の余白の設定 */
   margin-right: 30px; /* 右側のコンテナとの間隔を調整 */
+  border-radius: 5px; /* 添加边框圆角效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.event-list li {
+  margin-bottom: 10px; /* 设置列表项之间的间距 */
+  border-bottom: 1px solid #ccc; /* 添加分割线 */
+  padding-bottom: 5px; /* 设置分割线下方的间距 */
 }
 
 /* 右側のPDF埋め込みコンテナのスタイル */
