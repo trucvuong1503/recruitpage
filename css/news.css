@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background: #FADFE5;
 }
+
 .news-header {
   text-align: left;
   margin-right: 40px;
@@ -31,10 +33,11 @@
 
 .event-list {
   flex-grow: 1;
-  background: rgba(255, 192, 203, 0.5);
+  background: #fff;
   margin: 0px 40px;
   padding: 30px;
   border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .event-list ul {
@@ -61,8 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
-  padding: 50px;
+  padding: 50px 0px;
   border-radius: 8px;
   width: 80%;
   margin: 0 auto;
@@ -80,6 +82,7 @@
   width: 70%;
   height: 500px;
   margin-bottom: 1em;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.5);
 }
 
 #prev, 

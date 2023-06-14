@@ -1,6 +1,6 @@
 #about{
     /* background: rgba(243,187,200,0.7); */
-    background: #fff;
+    background: #fff(209, 192, 192, 0.5);
 }
 .home{
     display: flex;
@@ -11,13 +11,11 @@
     background-size: cover;
     background-position: center;
 }
-
 .content {
     max-width: 50rem;
     text-align: left;
     margin-left: 8%;
   }
-  
 .title {
     font-weight: bold;
     color: white;
@@ -35,23 +33,45 @@
 }
 
 .show{
-    width: 550px; /* 调整图片的宽度 */
-    height: 300px; /* 调整图片的高度 */
-    float: left; /* 图片左浮动 */
+    float: left;
     margin-bottom: 20px;  
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px; 
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow:0 3px 9px rgba(0,0,0,0.5);
 }
 
 .textlist {
-    width: 45%;
-    padding: 20px;
-    height:auto;
+    width: 100%;
+    padding-left: 70px;
     overflow: auto;
+    position: relative;
+}
+.textlist::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background-color: #FADFE5; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 50%; 
+    z-index: -1; 
+    transform: translate(-50%, -50%);
 }
 .lalaleft{
     margin-left:0%;
+}
+.lalamid{
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
 }
 .lalaright{
     float: right;
@@ -59,26 +79,21 @@
     margin-bottom: 10px;
 }
 
-.about .textlist h2{
-    font-size: 4rem;
-    font-style: oblique;
+.about .textlist h1{
+    font-size: 3em;
 }
-
 .about .textlist h3{
     font-size: 3rem;
-    font-family:'Times New Roman', Times, serif;
-    font-style:oblique;
+    font-family:'Raleway', Times, serif;
     letter-spacing: 2px;
     color: blue;
+    line-height: 50px;
 }
-
-
 .heading span{
     color:var(--red);
 }
-
 .about .textlist p{
-    font-size: 1.7rem;
-    font-weight: bold;
+    font-size: 1.3rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+

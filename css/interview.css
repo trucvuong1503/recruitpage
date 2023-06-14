@@ -40,6 +40,7 @@
 	top:50%;
 	font-size: 1.25rem;
 	transform: translateY((-50%));
+	background-color: #f0f0f0;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.23);
 }
 .wrapper i:first-child{
@@ -98,7 +99,7 @@
 	width: 158px;
 	height: 158px;
 	border-radius: 50%;
-	
+	box-shadow: 0 3px 9px rgba(0,0,0,0.5);
 }
 .card .img img{
 	width: 150px;
