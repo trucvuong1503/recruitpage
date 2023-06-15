@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/sample.css">
     <link rel="stylesheet" type="text/css" href="./css/news.css">
-    <link rel="stylesheet" type="text/css" href="./css/interview.css">
+    <link rel="stylesheet" type="text/css" href="./css/recruit.css">
+    <link rel="stylesheet" type="text/css" href="./css/interviewNoArrow.css">
     <link rel="icon" href="./images/1.png" type="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="./javascript/app.js"></script>
-    <script src="./javascript/interview.js"></script>
-    <script src="./javascript/news.js"></script>
+    <!-- <script src="./javascript/interview.js"></script> -->
+    <script src="./javascript/interviewNoArrow.js"></script>
+    <!-- <script src="./javascript/news.js"></script> -->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>日発株式会社・採用サイト</title>
@@ -25,13 +28,17 @@
         <input type="checkbox" name="" id="headline">
         <label for="headline" class="head-bars"></label>
         <a href="index.html" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"></a>
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav>
             <ul class="nav-menu">
-              <li><a href="#home">HOME</a></li>
+              <li><a href="#home">TOP</a></li>
               <li><a href="#news">NEWS</a></li>
               <li><a href="#about">MESSAGE</a></li>
-
-              
+              <li><a href="#about-pdf">ABOUT</a></li>
               <li class="dropdown">
                 <a href="index.html#interview">INTERVIEW</a>
                 <ul class="dropdown-menu">
@@ -59,6 +66,7 @@
             <h1 class="title">前に進める</h1>
         </div> 
     </section>
+    <!-- NEWS -->
     <div id="news" class="section">
       <div class="news-header"> 
         <h1>NEWS</h1>
@@ -104,11 +112,12 @@
         </ul>
         </div>
     </div>
+    <!-- MESSAGE -->
 <section class="about" id="about">
 
     <div class="imagelist">
-        <img src="./images/image1.jpg" alt="Image1" class="show" width="300" height="300">
-        <img src="./images/image2.jpg" alt="Image2" class="show" style="margin-left: 100px;width:400px ; height:400px">
+        <img src="./images/image1.jpg" alt="Image1" class="show">
+        <img src="./images/image2.jpg" alt="Image2" class="show">
     </div>
     
     <div class="textlist">
@@ -130,16 +139,17 @@
 
         <img src="./images/lala3.png" class="lalaright">
     </div>
-</section>   
+</section>  
+ <!--ABOUT PDF  -->
 <!-- <div id="news"> -->
-  <div class="news-h1" style="visibility: visible; animation-name: fadeInUp;">
+  <div class="news-h1" id="about-pdf" style="visibility: visible; animation-name: fadeInUp;">
     <h1>ABOUT</h1>
   </div>
   <div id="news-file">
     <div class="pdf-embed">
         <div class="added-text">下記のスライドにて、会社説明の資料をご覧いただけます</div>
         <!-- <canvas id="pdf-viewer"></canvas> -->
-<embed src="./other/Company-briefing-materials.pdf#toolbar=0" type="application/pdf" width="60%" height="500px">
+<embed src="./other/Company-briefing-materials.pdf#toolbar=0" type="application/pdf" class="emble-pdf" >
         <!-- <div class="page-navigation">
           <button id="prev">←</button>
           <div id="page_num"></div>
@@ -148,7 +158,7 @@
     </div>
   </div>
 </div>
-         <!-- インタビュ -->
+         <!-- INTERVIEW -->
     <div id="interview" class="section">
       <div class="recruit-info" >
         <a href="#interview"></a>
@@ -158,68 +168,30 @@
           若手からべテラン！<br>
         彼らの一日を覗いてみよう！</p>
      </div>
-    <div class="people">
-    <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <ul class="carousel">
-          <li class="card">
-            <div class="img">
-            <a href="interview2.html"><img src="./images/2020mid-career.png" alt="img" draggable="false" >
-            </a>
-            </div>
-            <h2>技術職</h2>
-            <span>2021年入社</span>
-          </li>
-          <li class="card">
-            <div class="img">
-              <a href="interview2.html">
-              <img src="./images/2021mid-career.png" alt="img" draggable="false" >
-            </a>
-            </div>
-            <h2>営業職</h2>
-            <span>2021年入社</span>
-          </li>
-          <li class="card">
-              <div class="img">
-                <a href="interview2.html">
-                <img src="./images/2022New graduate（man）.png" alt="img" draggable="false" >
-              </a>
+     <div class="background-section">
+        <div class="interview-section">
+          <div class="interview-container">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <div>
+                  <img src="./images/2020mid-career.png" alt="Employee 1">
+                </div>
+                <div>
+                  <img src="./images/2021mid-career.png" alt="Employee 1">
+                </div>
+                <div>
+                  <img src="./images/2022New graduate（man）.png" alt="Employee 1">
+                </div>
+                <div>
+                  <img src="./images/2022New graduate（women）.png" alt="Employee 1">
+                </div>
               </div>
-              <h2>技術職</h2>
-              <span>2022年入社</span>
-          </li>
-          <li class="card">
-              <div class="img">
-                <a href="interview2.html">
-                <img src="./images/2022New graduate（women）.png" alt="img" draggable="false" >
-              </a>
-              </div>
-              <h2>営業職</h2>
-              <span>2022年入社</span>
-          </li>
-          <li class="card">
-            <div class="img">
-              <a href="interview2.html">
-              <img src="./images/2020mid-career.png" alt="img" draggable="false" >
-            </a>
             </div>
-            <h2>技術職</h2>
-            <span>2022年入社</span>
-          </li>
-          <li class="card">
-            <div class="img">
-              <a href="interview2.html">
-              <img src="./images/2021mid-career.png" alt="img" draggable="false" >
-            </a>
-            </div>
-            <h2>技術職</h2>
-            <span>2023年入社</span>
-          </li>
-        </ul>
-        <i id="right" class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+    <!-- RECRUIT -->
     <div id="recruit" class="section">
       <div class="recruit-info">
         <a href="#recruit"></a>
@@ -237,14 +209,16 @@
             </div> 
     </div>
 </div>
+<!-- FOOTER -->
 <footer>
     <div id="footer" style="top: 0px;">
         <div class="container">
-          <!-- hd -->
             <div class="footer_hd">
                 <h3 class="footer_group_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <div class="logo-container">  
                     <img class="logo-img-small" src="./images/logo2.png" alt="">
-                    <span class="ja">.日発株式会社</span>
+                    <span class="ja">日発株式会社</span>
+                  </div>
                     <span class="en">©HIHATU Co.,Ltd. 2012, 2021. All Rights Reserved.</span>
                 </h3>
             </div>

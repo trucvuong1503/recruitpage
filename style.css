@@ -84,6 +84,13 @@ body {
     padding: 18px 10px;
     border-bottom: 1px dotted #ccc;
 }
+.requirements dl dd ul{
+    padding: 0 3em 15px;
+}
+.requirements a{
+    text-decoration: underline;
+}
+
 .requirements_box {
     padding: 0.5em 1em;
     margin: 1em 0;
@@ -139,7 +146,7 @@ body {
 }
 .outsite{
     text-align: center;
-    padding: 10px 30px;
+    padding: 30px;
 }
 .outsite img{
     width: 310px;
@@ -174,10 +181,36 @@ body {
 .center-button:hover {
     background-color: #5DB5D8; 
 }
+
 .btn-message{
     text-align: center;
     font-size: 1em;
-    padding-bottom: 20px;
+}
+
+/* フッタ */
+#footer {
+    background: #f2f2f2;
+    padding: 30px;
+}
+.footer_hd {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.footer_group_ttl {
+
+    letter-spacing: .1em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer_group_ttl .en {
+    font-family: 'Raleway',Meiryo, Hiragino Kaku Gothic Pro, sans-serif;
+    display: block;
+    font-size: 13px;
+}
+.logo-img-small{
+    padding-top: 10px;
+    height: 2.0em;
+    text-align: center;
 }
 /* page top button */
 #pageTop {

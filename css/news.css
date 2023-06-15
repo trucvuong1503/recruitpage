@@ -4,6 +4,7 @@
   align-items: flex-start;
   background: #FADFE5;
   border-left: 10px solid #EB456F;
+  padding-left: 30px;
 }
 
 .news-header {
@@ -42,6 +43,7 @@
 }
 
 .event-list {
+  width: 100%;
   flex-grow: 1;
   background: #fff;
   margin: 0px 40px;
@@ -57,8 +59,8 @@
 
 .event-list .list-item {
   display: flex;
-  justify-content: flex-start; /* Aligned to start */
-  gap: 80px; /* Adjust this value to your needs */
+  justify-content: flex-start;
+  gap: 80px;
   margin-bottom: 0.2em;
   padding: 8px;
   border-bottom: 1px solid #f7f7f7;
@@ -78,6 +80,31 @@
   background-color: #FADFE5; 
   color: palevioletred;
   font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  #news {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .news-header {
+    margin-right: 0;
+    text-align: center;
+  }
+  .event-list .list-item{
+    gap: 40px;
+  }
+  .event-list .date {
+    margin-bottom: 0.5em;
+  }
+}
+@media screen and (max-width: 468px) {
+  #news{
+    font-size: 12px;
+  }
 }
 /* PDF FILE */
 #news-file {
@@ -108,13 +135,43 @@
   text-align: center;
 }
 #pdf-viewer {
-  width: 70%;
-  height: 500px;
+
   margin-bottom: 1em;
   box-shadow: 0 3px 9px rgba(0,0,0,0.5);
 }
+.emble-pdf{
+  width:60%;
+  height:500px;
+}
+@media only screen and (max-width: 768px) {
+  #news-file {
+    width: 100%;
+    padding: 20px;
+  }
 
-#prev, 
+  .news-h1 {
+    padding-left: 10px;
+    text-align: center;
+    margin: auto;
+    border-left: 0px;
+    
+  }
+.news-h1 h1{
+  background-color: #FADFE5;
+}
+  .added-text {
+    padding: 5px;
+    font-size: 1.5em;
+  }
+
+  .emble-pdf{
+    width:100%;
+    height:500px;
+  }
+  
+}
+
+/* #prev, 
 #next {
   
   border: none;
@@ -138,4 +195,4 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-}
+} */

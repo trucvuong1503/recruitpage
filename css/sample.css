@@ -1,5 +1,4 @@
 #about{
-    /* background: rgba(243,187,200,0.7); */
     background: #fff(209, 192, 192, 0.5);
 }
 .home{
@@ -19,12 +18,12 @@
 .title {
     font-weight: bold;
     color: white;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 .title:last-child {
     font-weight: bold;
     color: white;
-    font-size: 7rem;
+    font-size: 10rem;
 }
 
 .about {
@@ -47,20 +46,38 @@
     object-fit: cover;
     box-shadow:0 3px 9px rgba(0,0,0,0.5);
 }
+.show:first-child{
+    width: 300px;
+    height: 300px;
+}
+.show:last-child{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+}
+
 
 .textlist {
     width: 100%;
     padding-left: 70px;
     overflow: auto;
     position: relative;
+    background: transparent;
 }
-.textlist::before {
+.about {
+    width: 100%;
+    padding-left: 70px;
+    overflow: auto;
+    position: relative;
+}
+
+.about::before {
     content: "";
     position: absolute;
     top: 45%;
-    left: 50%;
-    width: 600px;
-    height: 600px;
+    left: 70%;
+    width: 500px;
+    height: 500px;
     background-color: #FADFE5; 
     box-shadow: 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 50%; 
@@ -103,4 +120,53 @@
     font-size: 1.3rem;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
+
+
+/* Then use media queries to adjust layout for larger screens */
+@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    .title {
+        font-size: 3.5em;
+    }
+    .title:last-child {
+        font-size: 5em;
+    }
+    
+    .show {
+        float: none; /* Reset float */
+        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%; /* Adjust as needed */
+        height: auto;
+        display: none;
+    }
+    
+    .about {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+    }
+    
+    .imagelist, .textlist {
+        width: 100%; /* Take up full width on small screens */
+    }
+    
+    .textlist {
+        padding: 10px; /* Adjust as needed */
+        font-size: 14px;
+    }
+    .textlist .lalaright{
+        display: none;
+    }
+
+    .lalamid{
+        top:60%;
+    }
+    .about::before{
+        width: 300px;
+        height: 300px;
+    }
+}
+
 
