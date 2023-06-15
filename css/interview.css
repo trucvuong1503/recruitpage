@@ -4,13 +4,19 @@
     justify-content: space-between; /* aligns children elements on the horizontal line with maximum space between */
     align-items: flex-start;
 	background:#FADFE5;
+	border-right: 10px solid #EB456F;
 }
+
+#interview .recruit-info h1{
+	background-color: #fff;
+} 
 #interview .recruit-info p {
 	display: flex;
 	align-items: center;
 	margin-bottom: 0.5em;
 	font-size: 14px;
 }
+
 #interview .recruit-info{
 	text-align: left;
 }
@@ -20,9 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 38vh;
-	padding: 30px 35px;
-
-
+	padding: 30px 50px;
 }
 .wrapper{
 	max-width: 800px;

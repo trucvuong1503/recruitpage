@@ -3,16 +3,18 @@
   justify-content: space-between;
   align-items: flex-start;
   background: #FADFE5;
+  border-left: 10px solid #EB456F;
 }
 
 .news-header {
   text-align: left;
   margin-right: 40px;
+  animation: 2s ease;
 }
 
 .news-header h1 {
   font-size: 3em;
-  margin-bottom: 0.5em;
+  background-color: #fff;
 }
 
 .news-header .subheading {
@@ -27,8 +29,16 @@
 }
 
 .news-header .announcement img {
-  width: 26px; /* half of original width */
+  width: 26px; 
   height: 26px; 
+}
+.news-header h1, .news-header .subheading, .news-header .announcement {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+.news-header .show1 {
+  transform: translateX(0%);
+  opacity: 1; 
 }
 
 .event-list {
@@ -59,25 +69,44 @@
   font-weight: bold;
   margin-right: 1em;
 }
+
+.event-list a{
+  background-color: #FADFE5; 
+  color: palevioletred;
+}
+.event-list a:hover{
+  background-color: #FADFE5; 
+  color: palevioletred;
+  font-size: 18px;
+}
 /* PDF FILE */
 #news-file {
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
+  padding: 0px 0px 50px;
   border-radius: 8px;
   width: 80%;
   margin: 0 auto;
 }
+.news-h1{
+  width: fit-content;
+  
+  text-align: left;
+  padding-left: 20px;
+  border-left: 10px solid #EB456F;
+}
+.news-h1 h1{
+  background-color: #fff;
+  font-size: 3em;
+}
 .added-text{
   padding: 10px;
-  font-size: 2em;
+  font-size: 1.2em;
 }
 .pdf-embed {
   width: 100%;
   text-align: center;
 }
-
 #pdf-viewer {
   width: 70%;
   height: 500px;
