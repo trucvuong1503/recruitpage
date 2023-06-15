@@ -88,6 +88,7 @@
     align-items: center;
     width: 100%;
     font-size: 15px;
+    padding-left: 7px;
   }
 
   .news-header {
@@ -110,7 +111,7 @@
 #news-file {
   justify-content: center;
   align-items: center;
-  padding: 0px 0px 50px;
+  padding: 50px;
   border-radius: 8px;
   width: 80%;
   margin: 0 auto;
@@ -161,7 +162,7 @@
 }
   .added-text {
     padding: 5px;
-    font-size: 1.5em;
+
   }
 
   .emble-pdf{
@@ -170,29 +171,3 @@
   }
   
 }
-
-/* #prev, 
-#next {
-  
-  border: none;
-  color: #000;
-  padding: 7px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-#page_num {
-  display: inline-block;
-  margin: 0 1em;
-}
-
-.page-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-} */

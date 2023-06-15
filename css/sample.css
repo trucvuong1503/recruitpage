@@ -126,10 +126,10 @@
 /* Then use media queries to adjust layout for larger screens */
 @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
     .title {
-        font-size: 3.5em;
+        font-size: 3em;
     }
     .title:last-child {
-        font-size: 5em;
+        font-size: 4em;
     }
     
     .show {
