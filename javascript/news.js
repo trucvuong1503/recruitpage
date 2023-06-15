@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Your browser does not support the HTML5 canvas');
     }
 
-var url = "./other/Company-briefing-materials.pdf";
+var url = "./other/1.pdf";
 var pdfDoc = null,
     pageNum = 1,
     pageRendering = false,
