@@ -84,6 +84,10 @@ body {
     padding: 18px 10px;
     border-bottom: 1px dotted #ccc;
 }
+
+.requirements dl dd ul {
+    padding: 0 3em 15px;
+}
 .requirements_box {
     padding: 0.5em 1em;
     margin: 1em 0;
@@ -241,6 +245,7 @@ body {
     .requirements dl dd {
         padding-left: 10px;
     }
+    
     .process{
         flex-direction: column;
     }

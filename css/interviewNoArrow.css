@@ -89,10 +89,6 @@ img {
   }
   
 @media screen and (max-width: 900px) {
-	#interview p{
-		font-size: 13px;
-	}
-	
 	.image-container{
 		max-width: 500px;
 	}

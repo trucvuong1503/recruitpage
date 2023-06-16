@@ -14,12 +14,12 @@
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease;
-  background: #ffffff70;
+  background: #fcf7f75a;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 .navbar.sticky{
   padding: 10px 0;
-  background: #ffffff70;
+  background: #fcf7f75a;
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
 }
 .navbar .content-nav{
@@ -31,20 +31,17 @@
   color: #fff;
   font-size: 2rem;
   color:#333;
-  font-weight: bolder;
+  font-weight: 800;
   text-decoration: none;
   
 }
 .navbar .logo img{
-  width: 1.9 em; 
-  height: 2.0em; 
+  height: 2.0em;
   float: left; 
   margin-right: 80px; 
-  
 }
 .navbar .menu-list{
   list-style-type: none;
-  font-size: 2rem;
   display: inline-flex;
 }
 .menu-list li{
@@ -52,8 +49,8 @@
  
 }
 .menu-list li a{
-  color: #555;
-  font-size: 2rem;
+  color: #000;
+  font-size: 2.1rem;
   font-weight: 500;
   margin: 0 1rem;
   padding: 0 1rem;
@@ -110,6 +107,9 @@
 }
 
 @media (max-width: 768px) {
+  .navbar .logo img{
+    width: 8em;
+  }
   .navbar{
     position: fixed;
     background-color: #fff;

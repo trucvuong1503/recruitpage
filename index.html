@@ -14,7 +14,7 @@
     <link rel="icon" href="./images/1.png" type="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <script src="./javascript/app.js"></script>
     <script src="./javascript/interviewNoArrow.js"></script>
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
@@ -27,8 +27,6 @@
       <div class="logo">
         <a href="index.html" class="logo">
         <img src="./images/logo1.png" alt="Logo"></a>
-        <!-- <img src="./images/logo1.png" alt="Logo" class="logo-img"></a> -->
-
       </div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
@@ -122,51 +120,48 @@
     <div class="textlist">
         <img src="./images/lala4.png" class="lalaleft">
         <img src="./images/23499570.png" class="lalamid">
-        <h1>MESSAGE</h1>
-        <h2 style="font-size: 2rem;">採用メッセージ</h2><br>
-        <h3>Turning A Negative Situation<br>
-             Into A Positive One</h3><br>
-        <p  class="heading" style="font-size: 2rem;">ネガティブを<span>ポジティブ</span>に変えよう</p>
-        <p>当社は、“これからを大切にする”、</p>
-        <p>弱みを強みに変える社風が定着。</p>
-        <p>経験豊富なエンジニアだけではなく、</p>
-        <p>未経験のエンジニアも積極的に採用し、</p>
-        <p>育成・成長を促す体制があります。</p>
-            <br>
-        <p>自分なりの理想・目標があるなら、</p>
-        <p>“日々発展”する日発で一緒に働きませんか？</p><br>
-
+        <div class="textlist-second">
+            <h1>MESSAGE</h1>
+            <h2 style="font-size: 2rem;">採用メッセージ</h2><br>
+            <h3>Turning A Negative Situation<br>
+                Into A Positive One</h3><br>
+            <p  class="heading" style="font-size: 2rem;">ネガティブを<span>ポジティブ</span>に変えよう</p>
+            <p>当社は、“これからを大切にする”、</p>
+            <p>弱みを強みに変える社風が定着。</p>
+            <p>経験豊富なエンジニアだけではなく、</p>
+            <p>未経験のエンジニアも積極的に採用し、</p>
+            <p>育成・成長を促す体制があります。</p>
+                <br>
+            <p>自分なりの理想・目標があるなら、</p>
+            <p>“日々発展”する日発で一緒に働きませんか？</p><br>
+        </div>
         <img src="./images/lala3.png" class="lalaright">
     </div>
 </section>  
  <!--ABOUT PDF  -->
-<!-- <div id="news"> -->
+
   <div class="news-h1" id="about-pdf" style="visibility: visible; animation-name: fadeInUp;">
-    <h1>ABOUT</h1>
+      <h1>ABOUT</h1>
   </div>
   <div id="news-file">
     <div class="pdf-embed">
         <div class="added-text">下記のスライドにて、会社説明の資料をご覧いただけます</div>
-        <!-- <canvas id="pdf-viewer"></canvas> -->
-<embed src="./other/Company-briefing-materials.pdf#toolbar=0" type="application/pdf" class="emble-pdf" >
-        <!-- <div class="page-navigation">
-          <button id="prev">←</button>
-          <div id="page_num"></div>
-          <button id="next">→</button>
-        </div> -->
-    </div>
+        <iframe src="./other/Company-briefing-materials.pdf#toolbar=0&navpanes=0&scrollbar=0" class="emble-pdf" width="70%" height="500px">
+        </iframe>
+      </div>
   </div>
 </div>
          <!-- INTERVIEW -->
     <div id="interview" class="section">
-      <div class="recruit-info" >
-        <a href="#interview"></a>
-        <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">PEOPLE</h1>
-        <h3 class="requirements_enge">社員インタビュー</h3>
-        <p>日発にどんな先輩がいるの？<br>
+     <div class="news-header"> 
+      <h1>PEOPLE</h1>
+      <p class="subheading">社員インタビュー</p>
+      <div class="announcement">
+        日発にどんな先輩がいるの？<br>
           若手からべテラン！<br>
-        彼らの一日を覗いてみよう！</p>
-     </div>
+        彼らの一日を覗いてみよう！
+      </div>
+    </div> 
      <div class="background-section">
         <div class="interview-section">
           <div class="interview-container">
@@ -192,12 +187,13 @@
     </div>
     <!-- RECRUIT -->
     <div id="recruit" class="section">
-      <div class="recruit-info">
-        <a href="#recruit"></a>
-        <h1 class="pages_ttl wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">RECRUIT</h1>
-        <h3 class="requirements_enge">募集要項</h3>
-        <p>2024年度新卒採用</p> 
-      </div>   
+      <div class="news-header"> 
+        <h1 style="background-color: #FADFE5;">RECRUIT</h1>
+        <p class="subheading">募集要項</p>
+        <div class="announcement">
+          <span>2024年度新卒採用!</span>
+        </div>
+      </div> 
         <div class="recruit-options">
                 <div class="recruit-option">
                     <a href="graduate.html" class="recruit-link" id="left">新卒採用</a>

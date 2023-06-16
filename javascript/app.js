@@ -33,20 +33,25 @@ function sendEmail() {
 // ヘッダーの機能
 document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', function() {
-      let header = document.querySelector('.news-header');
-      let h1 = header.querySelector('h1');
-      let subheading = header.querySelector('.subheading');
-      let announcement = header.querySelector('.announcement');
-
-      let headerPos = header.getBoundingClientRect().top;
+      let headers = document.querySelectorAll('.news-header');
       let windowH = window.innerHeight / 1.3;
-    
-      if (headerPos < windowH) {
-        h1.classList.add('show1');
-        subheading.classList.add('show1');
-        announcement.classList.add('show1');
-      }
-    });
+
+      headers.forEach(header => {
+          let h1 = header.querySelector('h1');
+          let subheading = header.querySelector('.subheading');
+          let announcement = header.querySelector('.announcement');
+
+          let headerPos = header.getBoundingClientRect().top;
+
+          if (headerPos < windowH) {
+              h1.classList.add('show1');
+              subheading.classList.add('show1');
+              announcement.classList.add('show1');
+          }
+      });
+  });
+
+
 
 
     const body = document.querySelector("body");

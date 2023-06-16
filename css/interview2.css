@@ -97,6 +97,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  #interview {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+  }
   .interview-section h1{
     margin-bottom: 0;
   }
