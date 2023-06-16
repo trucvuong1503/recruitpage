@@ -191,10 +191,10 @@ body {
     z-index: 9999;
 }
 #pageTop a {
-    background: #F4C107;
+    background: transparent;
     text-decoration: none;
-    color: #fff;
-    padding: 9px 15px 3px 15px;
+    color: #F4C107;
+    
     text-align: center;
     display: block;
     opacity: 0.9;
@@ -202,16 +202,12 @@ body {
     border-radius: 6px;
 }
 .angleUp:before {
-    content: "^";
-    padding-right: 0;
-    font-size: 1.4em;
-    font-family: 'icomoon' !important;
+    content: "";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
 }
 @media screen and (max-width: 768px) {
     .container{
