@@ -1,49 +1,106 @@
-/* Nav */
-.nav-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  display: flex;
-}
 
-.nav-menu li {
-  display: inline-block;
-  position: relative;
+.content-nav{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0px 30px;
+}
+.navbar{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top:0; left:0; right:0px;
+  padding:1.2rem 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  background: #ffffff70;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.navbar.sticky{
+  padding: 10px 0;
+  background: #ffffff70;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 2rem;
+  color:#333;
+  font-weight: bolder;
+  text-decoration: none;
   
 }
-
-.nav-menu li a {
-  display: block;
-  padding:0 1.5rem;
-  text-decoration: none;
+.navbar .logo img{
+  width: 1.9 em; 
+  height: 2.0em; 
+  float: left; 
+  margin-right: 80px; 
+  
+}
+.navbar .menu-list{
+  list-style-type: none;
+  font-size: 2rem;
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+ 
+}
+.menu-list li a{
   color: #555;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #E8526F;
+}
+
+.icon{
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.icon.cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.navbar.sticky .icon.cancel-btn{
+  top: 10px;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
   list-style-type: none;
-  padding: 0 2rem;
+  
   margin: 0;
   background: rgba(253, 250, 232, 0.8);
   transition: all 0.5s ease;
-  font-size: 13px;
-  display: none;
   border-top: 3px solid red;
 }
 
 .dropdown-menu li {
+  padding: 0 1rem;
   display: block;
   float: none;
   text-align: center;
   font-weight: 600;
-  font-size: 13px;
   border-bottom: 1px solid #f8f1c4;
 }
 
 .dropdown-menu li a {
-  padding: 10px;
+  font-size: 14px;
   text-decoration: none;
   color: #555;
 }
@@ -52,65 +109,18 @@
   display: block;
 }
 
-#headline {
-  display: none;
-}
-
-.head-bars {
-  display: none;
-  cursor: pointer;
-}
-
-#nav-icon {
-  display: none;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Styles for Mobile */
 @media (max-width: 768px) {
-  
-  .nav-menu {
-    display: none;
-    flex-direction: column;
+  .navbar{
+    position: fixed;
+    background-color: #fff;
   }
-  .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff70;
-    width: 100%;
-    position: absolute;
-    top: 70px; /* Adjust according to your header height */
-    left: 0;
-    z-index: 1000;
+  .menu-list.active li a:hover{
+    font-size: larger;
   }
-  .logo{
-    color: #555;
+  .navbar.sticky{
+    background-color: #fff;
   }
-  .nav-menu.active li {
-    display: block;
-  }
-  
-  
-
-  #nav-icon {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  #nav-icon span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    background-color: #333;
-  }
-
-  /* Additional styles for dropdown on mobile */
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover .dropdown-menu{
     display: none;
   }
 
@@ -119,6 +129,55 @@
   }
 
   .dropdown:active .dropdown-menu {
+    display: none;
+  }
+  body.disabledScroll{
+    overflow: hidden;
+  }
+  .show:last-child, .show:first-child{
+    display: none;
+  }
+  .icon{
+    display: block;    
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 9;
+  }
+  .icon.cancel-btn{
+    display: none;
+  }
+  .icon.cancel-btn.show1{
     display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky .menu-list{
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+  }
+  .navbar .menu-list.active{
+    clip-path: circle(75%);
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
   }
 }

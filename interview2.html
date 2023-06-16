@@ -13,42 +13,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./javascript/interview2.js"></script>
+    <script src="./javascript/app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 <body>
-  <header id="page-top">
-    <input type="checkbox" name="" id="headline">
-    <label for="headline" class="head-bars"></label>
-    <a href="index.html" class="logo"><img src="./images/logo1.png" alt="Logo" class="logo-img"></a>
-    <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html#home">TOP</a></li>
-          <li><a href="index.html#news">NEWS</a></li>
-          <li><a href="index.html#about">MESSAGE</a></li>
-          <li><a href="index.html#about-pdf">ABOUT</a></li>
+  <nav class="navbar">
+    <div class="content-nav">
+      <div class="logo">
+        <a href="index.html" class="logo">
+        <img src="./images/logo1.png" alt="Logo"></a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html#home" id="home-show" class="nav-links">TOP</a></li>
+          <li><a href="index.html#news" id="news-show" class="nav-links">NEWS</a></li>
+          <li><a href="index.html#about" id="about-show" class="nav-links">MESSAGE</a></li>
+          <li><a href="index.html#about-pdf" id="about-pdf-show" class="nav-links">ABOUT</a></li>
           <li class="dropdown">
-            <a href="index.html#interview">INTERVIEW</a>
+            <a href="interview2.html" id="interview-show" class="nav-links">INTERVIEW</a>
             <ul class="dropdown-menu">
               <li><a href="interview2.html">社員インタビュー</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#recruit">RECRUIT</a>
+            <a href="graduate.html" id="recruit-show" class="nav-links">RECRUIT</a>
             <ul class="dropdown-menu">
               <li><a href="graduate.html">新卒採用</a></li>
               <li><a href="expert.html">経験者採用</a></li>
             </ul>
           </li>
-        </ul>
-      </nav>
-      
-</header>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
   <div class="interview-section">
     <div class="interview-row">
       <div class="interview-item interview-item-left" >
         <img src="./images/2020mid-career.png" alt="Employee 1">
       </div>
       <div class="interview-item interview-item-right interview-content">
-        <h1>ウィークポイントを気にせずに楽しく働ける場所だと思います</h1><br><br><br><br>
+        <h1>ウィークポイントを気にせずに楽しく働ける場所だと思います</h1><br>
         <p>IT業界の経験はあったものの、前職では通信業界の案件でキャリアの調整などのスタッフ業務がメイン。技術職ではない事で思ったような評価をしてもらえませんでした。ただ、当社は“自分のできる事でお客
           様の信頼を獲得できればOK”と、評価軸を明確に提示。前職でコンプレックスだと感じていたスキル、日発で一気に自分の強みになりました。また、私の職務経歴はところどころにブランクがあり、これまでの転
           職活動ではネックになっていました。ただ日発の社員・役員の方々は、その部分もブランク中の経験も聞き取ってくれた上でポジティブに捉えてくれたんです。この会社なら、どんなことでも楽しんで働ける場所だと感じました。
@@ -58,7 +67,7 @@
     <div class="fadeinright">
     <div class="interview-row interview-row-alt">
       <div class="interview-item interview-item-right interview-content">
-        <h1>『今何ができるか』『将来何がしたいか』を見てくれる会社です</h1><br><br><br><br>
+        <h1>『今何ができるか』『将来何がしたいか』を見てくれる会社です</h1><br>
         <p>前職は、キャパオーバーが当たり前。しかも、自分のできない部分ばかり注目されて、頑張ろうという気持ちがなかなか起きづらい環境でした。
           ただ当社は、面接時から『何がやりたいか』を確認してくれた上、自分のスキルを踏まえて“この得意領域を一緒に伸ばしていきましょう”と、できる部分を見て評価してくれたんです。自分のできる事を大
           きくアピールできなかった自分にとっては、とても有り難い環境だと思いました。結果、希望していたプロジェクトリーダーや新人研修の講師を担当する事ができています。希望が実現できていないのを自分のせいにして

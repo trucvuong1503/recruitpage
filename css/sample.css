@@ -131,8 +131,8 @@
     .title:last-child {
         font-size: 4em;
     }
-    
-    .show {
+
+    .show{
         float: none; /* Reset float */
         margin-bottom: 20px;
         margin-top: 50px;

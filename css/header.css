@@ -36,10 +36,10 @@ header{
 }
 
 .logo-img {
-    width: 1.9 m; /* 调整图片的宽度 */
-    height: 2.0em; /* 调整图片的高度 */
-    float: left; /* 图片左浮动 */
-    margin-right: 10px; /* 可根据需要调整图片与文字之间的间距 */
+    width: 1.9 m; 
+    height: 2.0em; 
+    float: left; 
+    margin-right: 10px; 
 }
 
 header .logo{
@@ -81,5 +81,29 @@ header .head-bars{
     padding: 0px 0px 8px 0px;
     border-bottom: 3px solid red;
     width: 100%;
+}
+@media screen and (max-width: 600px) {
+    header{
+        height: 50px;
+        padding:5px 6%;
+    }
+    header ul{
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: -2px;
+    }
+    .logo-img {
+        width: 80px; /* 调整图片的宽度 */
+        height: auto;
+        float: left; /* 图片左浮动 */
+        margin-right: 8px; /* 可根据需要调整图片与文字之间的间距 */
+    }
+    header .head-bars{
+        font-size: 1rem;
+        padding:.1rem 0.5rem;
+    }
+    .nav-menu a{
+        font-size: 1rem;
+    }
 }
 

@@ -31,15 +31,15 @@ body {
     flex-wrap: wrap;
 }
 .tab-button {
-    background-color: #2C98C3;  /* pastel blue */
+    background-color: #2C98C3; 
     border: none;
     color: white;
-    padding: 15px 70px;  /* adjust as needed for size */
+    padding: 15px 70px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 21px;  /* adjust as needed */
-    margin: 10px 20px;  /* little space between buttons */
+    font-size: 21px; 
+    margin: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -209,3 +209,66 @@ body {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 10px;
+        margin: 10px;
+    }
+    .pages_ttl{
+        margin: 100px 0 44px 0;
+
+    }
+    .requirements_enge{
+        font-size: 1em;
+    }
+    b{
+        font-size: 0.9em;
+    }
+    .three_job{
+        display: flex;
+    }
+    .tab-button{
+        padding: 10px 10px;
+        margin: 10px;
+    }
+    .requirements dl dt {
+        float: left;
+        width: 100%;
+        padding: 0 6px auto auto;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    .requirements dl dd {
+        padding-left: 10px;
+    }
+    .process{
+        flex-direction: column;
+    }
+    .process_img{
+        float:none;
+        text-align: center;
+        width: 400px;
+        height: 300px;
+    }.process dd{
+        font-size: 13px;
+        padding: 0;
+    }
+    .process_info dl{
+        padding-top:5px;
+    }
+    .center-button{
+        padding: 7px 60px;
+        margin: 5px ;
+        font-size: 20px;
+        border-radius: 3px;
+
+    }
+    .outsite img{
+        padding-top: 0px;
+        width: 150px;
+    }
+    .btn-message{
+        font-size: 11px;
+        padding: 0;
+    }
+  }
