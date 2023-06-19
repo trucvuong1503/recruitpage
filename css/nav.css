@@ -27,6 +27,11 @@
   align-items: center;
   justify-content: space-between;
 }
+.logo{
+  font-size: 3rem;
+  color:#333;
+  font-weight: bolder;
+}
 .navbar .logo a{
   color: #fff;
   font-size: 2rem;

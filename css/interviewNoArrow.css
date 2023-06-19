@@ -1,4 +1,4 @@
-
+/* 社員インタビューバタン */
 #interview{
 	display: flex;
     justify-content: space-between; /* aligns children elements on the horizontal line with maximum space between */
@@ -59,7 +59,6 @@
   transition: .3s;
   justify-items: center;
 }
-
 .image-wrapper > * {
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -68,13 +67,28 @@
   justify-content: center;
   align-items: center;
 }
-
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   display: block;
   border-radius: .5rem;
+}
+@media screen and (max-width: 440px) {
+    #interview {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .image-container{
+        max-width: 240px;
+        margin-left: 0; /* 左マージンを0に設定 */
+        gap: 5px; /* 写真間の距離を5pxに設定 */
+    }
+    img {
+        max-width: 90%;
+        border-radius: .3rem;
+      }
 }
 @media screen and (max-width: 768px) {
 	#interview {

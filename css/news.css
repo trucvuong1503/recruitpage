@@ -111,6 +111,10 @@
   #news{
     font-size: 12px;
   }
+  .emble-pdf{
+    width: 70%;
+    height:280px;
+  }
 }
 /* PDF FILE */
 #news-file {
