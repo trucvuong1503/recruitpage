@@ -142,6 +142,7 @@
     display: none;
   }
   .icon{
+    padding-left: 30px;
     display: block;    
     text-align: center;
     line-height: 50px;
@@ -181,5 +182,10 @@
   }
   .navbar .menu-list li a{
     font-size: 23px;
+  }
+}
+@media (max-width: 400px) {
+  .icon{
+    padding-left: 40px;
   }
 }
