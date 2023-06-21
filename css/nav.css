@@ -1,13 +1,12 @@
 
 .content-nav{
-  max-width: 1250px;
+  
   margin: auto;
   padding: 0px 30px;
 }
 .navbar{
   position: fixed;
   z-index: 1000;
-  width: 100%;
   top:0; left:0; right:0px;
   padding:1.2rem 6%;
   display: flex;
@@ -127,10 +126,6 @@
   }
   .dropdown:hover .dropdown-menu{
     display: none;
-  }
-
-  .dropdown .dropdown-menu {
-    width: 100%;
   }
 
   .dropdown:active .dropdown-menu {
