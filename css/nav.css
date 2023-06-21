@@ -74,10 +74,10 @@
 .icon.cancel-btn{
   position: absolute;
   right: 30px;
-  top: 20px;
+  top: 10px;
 }
 .navbar.sticky .icon.cancel-btn{
-  top: 10px;
+  top: 5px;
 }
 
 .dropdown-menu {
@@ -142,8 +142,7 @@
   }
   .icon{
     display: block;    
-    height: 50px;
-    width: 50px;
+    
     text-align: center;
     line-height: 50px;
     border-radius: 50%;
