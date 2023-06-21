@@ -74,13 +74,23 @@
   display: block;
   border-radius: .5rem;
 }
+.text-show{
+  display: none;
+  list-style: none;
+  color: #555;
+  
+}
+.text-show:hover{
+  color: #EB456F;
+  font-size: 17px;
+}
 @media screen and (max-width: 440px) {
     #interview {
       flex-direction: column;
       align-items: center;
       text-align: center;
       margin: 0;
-      padding: 0;
+  
     }
     .image-container{
       width: 200px; /* 左マージンを0に設定 */
@@ -97,7 +107,7 @@
 	  align-items: center;
 	  text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 25px 0px;
 	}
   .interview-container{
     align-items: center;
@@ -106,4 +116,7 @@
    margin-left: 100px;
 		width: 350px;
 	}
+  .text-show{
+    display: block;
+  }
   }
