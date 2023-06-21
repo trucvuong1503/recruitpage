@@ -109,10 +109,24 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+@media (max-width: 440px) {
+  .content-nav{
+    margin: 0;
+  }
+  .navbar .logo img{
+    width: 100px;
+  }
 
+  .navbar .logo img{
+    height: auto;
+    float: left; 
+    margin-right: 0; 
+  }
+}
 @media (max-width: 768px) {
   .navbar .logo img{
-    width: 8em;
+    margin-right: 20px;
+    width: 6em;
   }
   .content-nav{
     margin: 0;
@@ -142,7 +156,7 @@
   }
   .icon{
     display: block;    
-    
+    margin-left: 40px;
     text-align: center;
     line-height: 50px;
     border-radius: 50%;
