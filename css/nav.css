@@ -112,7 +112,6 @@
 
 @media (max-width: 768px) {
   .navbar .logo img{
-    
     width: 8em;
   }
   .content-nav{
@@ -121,6 +120,7 @@
   .navbar{
     position: fixed;
     background-color: #fff;
+    padding: 1.3em 6%;
   }
   .menu-list.active li a:hover{
     font-size: larger;
