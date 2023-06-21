@@ -114,6 +114,9 @@
   .navbar .logo img{
     width: 8em;
   }
+  .content-nav{
+    margin: 0;
+  }
   .navbar{
     position: fixed;
     background-color: #fff;
