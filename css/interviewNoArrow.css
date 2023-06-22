@@ -80,10 +80,7 @@
   color: #555;
   
 }
-.text-show:hover{
-  color: #EB456F;
-  font-size: 17px;
-}
+
 @media screen and (max-width: 440px) {
     #interview {
       flex-direction: column;

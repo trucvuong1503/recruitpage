@@ -150,12 +150,22 @@
   font-size: 1.2em;
 }
 
+iframe{
+  width: 70%;
+  height:500px;
+}  
+object{
+  width: 70%;
+  height:500px;
+  margin-top: 20px;
+} 
 .pdf-embed {
   width: 100%;
+  height: auto;
+  overflow: auto;
   text-align: center;
   margin-bottom: 1em;
 }
-
 .emble-pdf{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4); 
 }
@@ -164,7 +174,6 @@
     width: 100%;
     padding: 20px;
   }
-
   .news-h1 {
     padding-left: 10px;
     text-align: center;
@@ -179,9 +188,28 @@
     padding: 5px;
     font-size: 16px;
   }
-
-  .emble-pdf{
-    height:400px;
-  }
+  iframe{
+    width: 95%;
+    height: 70vh;
+  }  
+  object{
+    width: 95%;
+    height: 70vh;
+  };
   
+}
+
+@media screen and (max-width: 415px) {
+  iframe {
+    width: 95%;
+    height: calc(50vh - 200px); /* 適宜調整してください */
+  }
+  object {
+    width: 95%;
+    height: calc(50vh - 200px); /* 適宜調整してください */
+  }
+  .pdf-embed{
+    justify-content: center;
+    align-items: center;
+  }
 }
