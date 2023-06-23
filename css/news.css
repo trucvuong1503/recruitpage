@@ -99,6 +99,9 @@
   .news-header .subheading{
     margin: 0;
   }
+  .event-list{
+    padding: 10px;
+  }
   .event-list .list-item{
     gap: 10px;
   }
