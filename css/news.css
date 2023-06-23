@@ -89,7 +89,6 @@
     padding: 20px;
     text-align: center;
   }
-
   .news-header {
     margin-right: 0;
     text-align: center;
@@ -105,25 +104,6 @@
   }
   .event-list .date {
     margin-bottom: 0.5em;
-  }
-}
-@media screen and (max-width: 468px) {
-  #news{
-    font-size: 12px;
-  }
-  .event-list{
-    margin: 0 10px;
-    padding: 0 10px;
-  }
-  .event-list .list-item{
-    gap: 10px;
-  }
-  .emble-pdf{
-    width: 70%;
-    height:280px;
-  }
-  .event-list .date {
-    margin-bottom: 0.1em;
   }
 }
 /* PDF FILE */
@@ -149,7 +129,6 @@
   padding: 0px 10px;
   font-size: 1.2em;
 }
-
 iframe{
   width: 70%;
   height:500px;
@@ -196,9 +175,7 @@ object{
     width: 95%;
     height: 70vh;
   };
-  
 }
-
 @media screen and (max-width: 415px) {
   iframe {
     width: 95%;
