@@ -106,6 +106,7 @@
     gap: 10px;
   }
   .event-list .date {
+    font-size: 1em;
     margin-bottom: 0.5em;
   }
 
