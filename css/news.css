@@ -202,13 +202,15 @@ object{
 @media screen and (max-width: 415px) {
   iframe {
     width: 95%;
-    height: calc(50vh - 200px); /* 適宜調整してください */
+    height:auto;
   }
   object {
     width: 95%;
-    height: calc(50vh - 200px); /* 適宜調整してください */
+    height: auto;
   }
   .pdf-embed{
+    width: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
   }
