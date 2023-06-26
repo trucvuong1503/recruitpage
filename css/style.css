@@ -7,7 +7,10 @@ html, body, div, h1, h2, h3, h4, h5,article, dl, dt, dd{
     vertical-align: baseline;
     background: transparent;
 }
-
+a{
+    list-style: none;
+    color: #2C98C3;
+}
 body {
     color: #333;
     font-size: 16px;
